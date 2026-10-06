@@ -14,3 +14,11 @@ Feature: Login functionality
   Scenario: Login fails for a locked-out user
     When I login with username "locked_out_user" and password "secret_sauce"
     Then I should see an error message containing "locked out"
+    
+     Scenario Outline: Login fails with invalid credential combinations
+    When I login with username "<username>" and password "<password>"
+    Then I should see an error message containing "<error>"
+
+    Examples:
+      | username      | password       | error     |
+      | invalid_user  | wrong_password | username  |
