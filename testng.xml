@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Automation Suite" parallel="tests" thread-count="2">
+
+    <test name="UI Tests - Cucumber/Selenium">
+        <classes>
+            <class name="com.framework.runner.TestRunner"/>
+        </classes>
+    </test>
+
+    <test name="API Tests - Rest Assured">
+        <classes>
+            <class name="com.framework.api.UsersApiTest"/>
+        </classes>
+    </test>
+
+</suite>
